@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "readyroom": {
+      "type": "http",
+      "url": "${RR_ORIGIN}/api/agent/v1/mcp?project_id=${RR_PROJECT}",
+      "headers": { "Authorization": "Bearer ${RR_CREDENTIAL}" }
+    }
+  }
+}

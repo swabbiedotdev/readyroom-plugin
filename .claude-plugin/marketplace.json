@@ -1,0 +1,15 @@
+{
+  "name": "readyroom",
+  "description": "Ready Room clients for coding agents.",
+  "owner": {
+    "name": "Swabbie"
+  },
+  "plugins": [
+    {
+      "name": "readyroom",
+      "source": "./plugin",
+      "description": "Ready Room guidance for coding agents: the RR MCP tools, pending RR messages at session start, and authoring guidance for the Ready Intent Package (RIP).",
+      "version": "0.3.0"
+    }
+  ]
+}
