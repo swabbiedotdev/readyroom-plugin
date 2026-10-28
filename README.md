@@ -2,8 +2,9 @@
 
 Connects Claude Code to a [Ready Room](https://readyroom.dev) project: the Ready
 Room MCP tools (ask product questions, read and take messages, read the Ready
-Intent Package), pending messages at the start of every session, and the
-authoring guide for `.ready` records.
+Intent Package), new messages added to Claude's context automatically (when a
+session starts, and before your next prompt, checked at most once a minute),
+and the authoring guide for `.ready` records.
 
 ## Install
 
@@ -18,12 +19,14 @@ authoring guide for `.ready` records.
    /plugin install readyroom@readyroom
    ```
 
-3. Restart Claude Code.
+3. Restart Claude Code once. Pending messages are added when a session starts,
+   and new ones before your next prompt. You can also ask Claude to check
+   Ready Room at any time.
 
 Other coding agents connect through MCP or the `rr` CLI
 ([`@readyroom/cli`](https://www.npmjs.com/package/@readyroom/cli)); Agent
 connections shows the setup for each. To validate a RIP, use
 [`@readyroom/ready`](https://www.npmjs.com/package/@readyroom/ready).
 
-Version 0.3.0. This repository is generated from Ready Room;
+Version 0.4.0. This repository is generated from Ready Room;
 changes made here are overwritten.
