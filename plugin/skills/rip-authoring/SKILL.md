@@ -86,6 +86,21 @@ entity, by, index, where, set, conflict, returns, path}]; index names an index
 badge on the entity. Split a journey over 12 steps or a sequence over 16
 messages into lettered parts (parts on the overview, part_of on each part).
 
+Plain words first. The fields a person reads (title, summary, a step's does,
+sees and copy, a rule's when/then/otherwise, guards and labels, and every
+message, note and node text) are written for someone coming back after a
+month: no identifiers, no ids, no code vocabulary. The identifier lives in
+its typed field (call, owner, code, ops, refs, inputs[].source, constants,
+files) or in notes; the viewer shows it beneath the words. A message's text
+says what it does ("Check that the member may manage their own connection"),
+and its call holds the symbol. A node's text names things in words; refs
+carry the record ids. Every rule and sequence (not a part) opens with a
+one-sentence summary saying what it decides or does. An id links
+automatically only in rationale and notes. A code a person sees (an error
+code) gets a term record with a copy_word, and prose uses the word. Keep a
+detail only when the owner would care if it changed: a lock mode, a file
+name or a search path is intent only when the product promises it.
+
 No loss: every fact has a home in a typed field, in rationale or notes, in
 tags, or in a referenced supplementary file. Never drop detail to make a
 record validate; if nothing fits, put it in notes or tags. Keep behavior in
@@ -99,7 +114,11 @@ field.invalid, field.unknown, record.duplicate, display.duplicate, ref.missing,
 ref.kind, ref.file, part.mismatch, journey.step, journey.empty, step.orphan,
 sequence.participant, rule.empty, rule.orphan, rule.decision, state.unknown,
 entity.column. Warnings: ops.index, entity.index, sequence.unreachable,
-size.*. When you add, rename or remove a record, update every record that
+size.*, text.ref-id, and the plain-words warnings text.code (a prose field
+reads as code; the message names the match and where it belongs), text.id (a
+prose field names a record by id; link it from the typed field named),
+text.call (a message's text repeats its call), summary.missing (a rule or
+sequence has no summary). When you add, rename or remove a record, update every record that
 references it (journey steps and step journey, parts and part_of, rules a step
 or message applies) so no reference dangles. Leave no new errors.
 

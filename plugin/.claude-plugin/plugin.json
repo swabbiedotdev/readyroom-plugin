@@ -1,7 +1,7 @@
 {
   "name": "readyroom",
   "displayName": "Ready Room",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Ready Room guidance for coding agents: the RR MCP tools, new RR messages added at session start and before each prompt, and authoring guidance for the Ready Intent Package (RIP).",
   "author": {
     "name": "Swabbie"
