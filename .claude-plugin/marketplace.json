@@ -9,7 +9,7 @@
       "name": "readyroom",
       "source": "./plugin",
       "description": "Ready Room guidance for coding agents: the RR MCP tools, new RR messages added at session start and before each prompt, and authoring guidance for the Ready Intent Package (RIP).",
-      "version": "0.4.1"
+      "version": "0.4.2"
     }
   ]
 }

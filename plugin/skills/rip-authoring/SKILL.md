@@ -90,8 +90,11 @@ Plain words first. The fields a person reads (title, summary, a step's does,
 sees and copy, a rule's when/then/otherwise, guards and labels, and every
 message, note and node text) are written for someone coming back after a
 month: no identifiers, no ids, no code vocabulary. The identifier lives in
-its typed field (call, owner, code, ops, refs, inputs[].source, constants,
-files) or in notes; the viewer shows it beneath the words. A message's text
+its typed field, and the viewer shows it beneath the words: a call in call,
+code in owner or code, the columns a write touches in ops[].by and ops[].set
+on the sequence that performs it, an operation's result in returns, a rule's
+operation lists in sets, a constant in constants, a record in refs. Notes
+take an identifier only when the format has no field for it. A message's text
 says what it does ("Check that the member may manage their own connection"),
 and its call holds the symbol. A node's text names things in words; refs
 carry the record ids. Every rule and sequence (not a part) opens with a
@@ -103,7 +106,9 @@ name or a search path is intent only when the product promises it.
 
 No loss: every fact has a home in a typed field, in rationale or notes, in
 tags, or in a referenced supplementary file. Never drop detail to make a
-record validate; if nothing fits, put it in notes or tags. Keep behavior in
+record validate; if nothing fits, put it in notes or tags. Notes are for
+context (scope, terminology, references, the reasons behind a choice), never
+for behavior or columns a typed field could hold. Keep behavior in
 its owning module's records and link to it by id from consumers instead of
 copying it. Edit only the records the change needs and keep every unchanged
 record byte for byte.
